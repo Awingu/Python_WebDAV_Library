@@ -24,7 +24,7 @@ import subprocess
 import sys
 
 
-__version__ = "0.4.3+awingu.1"
+__version__ = "0.4.3+awingu.2"
 
 
 class _BaseCommandRunner(core.Command):

@@ -241,7 +241,7 @@ class Connection(DAV):
 class _BasicAuthenticationInfo(object):
     def __init__(self, **kwArgs):
         self.__dict__.update(kwArgs)
-        self.cookie = base64.encodestring(("%s:%s" % (self.user, self.password)).encode('utf-8')).decode('utf-8').strip()
+        self.cookie = base64.encodebytes(("%s:%s" % (self.user, self.password)).encode('utf-8')).decode('utf-8').strip()
         self.authorization = "Basic " + self.cookie
         self.password = None     # protect password security
         
